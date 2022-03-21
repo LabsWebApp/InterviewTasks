@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "001_UnpairedElement", "001_UnpairedElement", "{B49BD351-981A-46C9-81AB-25F697980E8A}"
 	ProjectSection(SolutionItems) = preProject
-		Задание.txt = Задание.txt
+		UnpairedElement\Задание.txt = UnpairedElement\Задание.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestJob", "UnpairedElement\BestJob\BestJob.csproj", "{CC681F9C-F25E-4324-8061-5DB23E04E5F8}"
@@ -19,9 +19,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "002_BinaryTree", "002_Binar
 		BinaryTree\Задание.txt = BinaryTree\Задание.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestJob", "BinaryTree\BestJob\BestJob.csproj", "{F9B9CE10-9BEB-4E7C-A637-A05C95905F03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestJob", "BinaryTree\BestJob\BestJob.csproj", "{F9B9CE10-9BEB-4E7C-A637-A05C95905F03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_IntJob", "BinaryTree\IntJob\01_IntJob.csproj", "{2B7C8C4E-48CC-45FC-9B2A-797A101B32C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_IntJob", "BinaryTree\IntJob\01_IntJob.csproj", "{2B7C8C4E-48CC-45FC-9B2A-797A101B32C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003_PrimeNumber", "003_PrimeNumber", "{F8D7B7A9-17AD-461D-A1E8-AD882A4812EB}"
+	ProjectSection(SolutionItems) = preProject
+		PrimeNumber\Задание.txt = PrimeNumber\Задание.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_BruteForceJob", "PrimeNumber\BruteForceJob\01_BruteForceJob.csproj", "{F3178C4B-076C-4704-BFE9-D12CEEC39817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_LinqJob", "PrimeNumber\LinqJob\02_LinqJob.csproj", "{306F452D-74B2-4FFE-8952-3C8AFFCF46C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +58,14 @@ Global
 		{2B7C8C4E-48CC-45FC-9B2A-797A101B32C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B7C8C4E-48CC-45FC-9B2A-797A101B32C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B7C8C4E-48CC-45FC-9B2A-797A101B32C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3178C4B-076C-4704-BFE9-D12CEEC39817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3178C4B-076C-4704-BFE9-D12CEEC39817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3178C4B-076C-4704-BFE9-D12CEEC39817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3178C4B-076C-4704-BFE9-D12CEEC39817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306F452D-74B2-4FFE-8952-3C8AFFCF46C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306F452D-74B2-4FFE-8952-3C8AFFCF46C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306F452D-74B2-4FFE-8952-3C8AFFCF46C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306F452D-74B2-4FFE-8952-3C8AFFCF46C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +76,8 @@ Global
 		{20235FDC-4786-445A-960B-D39E047EABB3} = {B49BD351-981A-46C9-81AB-25F697980E8A}
 		{F9B9CE10-9BEB-4E7C-A637-A05C95905F03} = {941E3272-E892-49FC-A9B9-F36498937782}
 		{2B7C8C4E-48CC-45FC-9B2A-797A101B32C0} = {941E3272-E892-49FC-A9B9-F36498937782}
+		{F3178C4B-076C-4704-BFE9-D12CEEC39817} = {F8D7B7A9-17AD-461D-A1E8-AD882A4812EB}
+		{306F452D-74B2-4FFE-8952-3C8AFFCF46C3} = {F8D7B7A9-17AD-461D-A1E8-AD882A4812EB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF2A69B2-8AF6-49CF-87DC-528CF3C20916}
