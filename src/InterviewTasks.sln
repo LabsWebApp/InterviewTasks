@@ -30,7 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003_PrimeNumber", "003_Prim
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_BruteForceJob", "PrimeNumber\BruteForceJob\01_BruteForceJob.csproj", "{F3178C4B-076C-4704-BFE9-D12CEEC39817}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_LinqJob", "PrimeNumber\LinqJob\02_LinqJob.csproj", "{306F452D-74B2-4FFE-8952-3C8AFFCF46C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_LinqJob", "PrimeNumber\LinqJob\02_LinqJob.csproj", "{306F452D-74B2-4FFE-8952-3C8AFFCF46C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

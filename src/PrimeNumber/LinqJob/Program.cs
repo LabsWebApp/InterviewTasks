@@ -6,17 +6,18 @@ Console.WriteLine(312471072265);
 // Все проверки делались на int-перечислении
 // и только в конце подсчёт аккумулировался в long,
 // что существенно ускоряет и облегчает процесс.
-var result = StepRange(3, end - 1, i => i + 2)
+var result = StepRange(3, end, i => i + 2)
     .AsParallel()
-    .Where(n => Enumerable.Range(2, (int)Math.Sqrt(n))
-        .All(j => n % j != 0))
+    .Where(j => StepRange(3, (int)Math.Sqrt(j), i => i + 2)
+        .All(k => j % k != 0))
     .Aggregate(2L, (x, y) => x + y);
 
 Console.WriteLine(result);
 
-static IEnumerable<int> StepRange(int start, int end, Func<int, int> step)
+static IEnumerable<T> StepRange<T>(T start, T end, Func<T, T> step)
+    where T : IComparable
 {
-    while (start <= end)
+    while (start.CompareTo(end) <= 0)
     {
         yield return start;
         start = step(start);

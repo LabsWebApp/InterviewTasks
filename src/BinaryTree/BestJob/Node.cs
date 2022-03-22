@@ -14,7 +14,7 @@ public sealed record Node<T>(
     Node<T>? Right = null)
     where T : struct, IComparable
 {
-    public T Add(T a, T b)
+    private T Add(T a, T b)
     {
         var paramA = Expression.Parameter(typeof(T), "a");
         var paramB = Expression.Parameter(typeof(T), "b");
@@ -28,7 +28,7 @@ public sealed record Node<T>(
         return add(a, b);
     }
 
-    public T? Max(T? a, T? b) => (a, b) switch
+    private T? Max(T? a, T? b) => (a, b) switch
     {
         (null, _) => b,
         (_, null) => a,
@@ -39,7 +39,8 @@ public sealed record Node<T>(
     {
         null => default,
         _ => Add(
-            Max(MaxBranchSum(node.Left), MaxBranchSum(node.Right)) ?? default, 
-            node.Value)
+            Max(MaxBranchSum(node.Left), 
+                MaxBranchSum(node.Right)) 
+            ?? default, node.Value)
     };
 }
