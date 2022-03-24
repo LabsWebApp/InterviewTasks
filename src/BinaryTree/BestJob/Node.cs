@@ -19,9 +19,9 @@ public sealed record Node<T>(
         var paramA = Expression.Parameter(typeof(T), "a");
         var paramB = Expression.Parameter(typeof(T), "b");
 
-        BinaryExpression body = Expression.Add(paramA, paramB);
+        var body = Expression.Add(paramA, paramB);
 
-        Func<T, T, T> add = Expression
+        var add = Expression
             .Lambda<Func<T, T, T>>(body, paramA, paramB)
             .Compile();
 
@@ -30,8 +30,8 @@ public sealed record Node<T>(
 
     private T? Max(T? a, T? b) => (a, b) switch
     {
-        (null, _) => b,
         (_, null) => a,
+        (null, _) => b,
         _ => a.Value.CompareTo(b.Value) >= 0 ? a : b
     };
 
@@ -39,8 +39,7 @@ public sealed record Node<T>(
     {
         null => default,
         _ => Add(
-            Max(MaxBranchSum(node.Left), 
-                MaxBranchSum(node.Right)) 
+            Max(MaxBranchSum(node.Left), MaxBranchSum(node.Right)) 
             ?? default, node.Value)
     };
 }

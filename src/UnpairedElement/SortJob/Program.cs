@@ -12,7 +12,7 @@ source = source.OrderBy(n => n).ToArray();
 
 //перебор вроде(?) не входит в сложность
 //"один элемент непарный", значит выйдет из цикла
-for (int i = 0;;)
+for (var i = 0;;)
 {
     if (i + 1 == source.Length || source[i] != source[i + 1])
     {
