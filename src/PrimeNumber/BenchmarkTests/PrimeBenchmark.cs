@@ -7,7 +7,7 @@ namespace BenchmarkTests;
 [RankColumn]
 public class PrimeBenchmark
 {
-    private const int End = 10000;
+    private const int End = 1000000;
 
     [Benchmark(Description = "Simple")]
     public void BruteForceJobPrimeParallelSumTest()

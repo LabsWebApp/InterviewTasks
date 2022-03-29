@@ -32,7 +32,7 @@ public sealed record Node<T>(
     {
         (_, null) => a,
         (null, _) => b,
-        _ => a.Value.CompareTo(b.Value) >= 0 ? a : b
+        _ => ((T)a).CompareTo((T)b) >= 0 ? a : b
     };
 
     public T MaxBranchSum(Node<T>? node) => node switch

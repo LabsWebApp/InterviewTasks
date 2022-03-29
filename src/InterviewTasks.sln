@@ -34,6 +34,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkTests", "PrimeNumb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_SimpleJob", "PrimeNumber\SimpleJob\02_SimpleJob.csproj", "{8A918B04-4CC8-4131-BFEC-13712A8DC048}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "004_TwoPointers", "004_TwoPointers", "{1FD05C1B-DA09-47F5-ADC3-879F59A366C7}"
+	ProjectSection(SolutionItems) = preProject
+		TwoPointers\Readme.txt = TwoPointers\Readme.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FindCelebrity", "FindCelebrity", "{D37872CD-B8F4-4C01-8246-880C93260C7C}"
+	ProjectSection(SolutionItems) = preProject
+		TwoPointers\FindCelebrity\Задание.txt = TwoPointers\FindCelebrity\Задание.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_BruteForceSearchJob", "TwoPointers\FindCelebrity\BruteForceSearchJob\01_BruteForceSearchJob.csproj", "{AE518127-A467-43DC-8968-11EDE59C912B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestJob", "TwoPointers\FindCelebrity\BestJob\BestJob.csproj", "{551A547A-0855-4943-B604-B914A4BEC563}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +86,14 @@ Global
 		{8A918B04-4CC8-4131-BFEC-13712A8DC048}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A918B04-4CC8-4131-BFEC-13712A8DC048}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A918B04-4CC8-4131-BFEC-13712A8DC048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE518127-A467-43DC-8968-11EDE59C912B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE518127-A467-43DC-8968-11EDE59C912B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE518127-A467-43DC-8968-11EDE59C912B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE518127-A467-43DC-8968-11EDE59C912B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{551A547A-0855-4943-B604-B914A4BEC563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{551A547A-0855-4943-B604-B914A4BEC563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{551A547A-0855-4943-B604-B914A4BEC563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{551A547A-0855-4943-B604-B914A4BEC563}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +107,9 @@ Global
 		{306F452D-74B2-4FFE-8952-3C8AFFCF46C3} = {F8D7B7A9-17AD-461D-A1E8-AD882A4812EB}
 		{819793BB-D08F-403E-9695-A70EFBB55B64} = {F8D7B7A9-17AD-461D-A1E8-AD882A4812EB}
 		{8A918B04-4CC8-4131-BFEC-13712A8DC048} = {F8D7B7A9-17AD-461D-A1E8-AD882A4812EB}
+		{D37872CD-B8F4-4C01-8246-880C93260C7C} = {1FD05C1B-DA09-47F5-ADC3-879F59A366C7}
+		{AE518127-A467-43DC-8968-11EDE59C912B} = {D37872CD-B8F4-4C01-8246-880C93260C7C}
+		{551A547A-0855-4943-B604-B914A4BEC563} = {D37872CD-B8F4-4C01-8246-880C93260C7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF2A69B2-8AF6-49CF-87DC-528CF3C20916}
