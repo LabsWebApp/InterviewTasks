@@ -1,6 +1,4 @@
-﻿using BestJob;
-
-Node<int> node = new(6,
+﻿Node<int> node = new(6,
     new(2,
         new(1,
             new(10),
