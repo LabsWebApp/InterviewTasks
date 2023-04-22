@@ -1,16 +1,15 @@
-﻿//Решение не совсем полное (см BestJob),
-//однако, для позиции Junior достаточна!
-namespace IntJob;
+﻿namespace IntJob;
 
 public sealed record Node(int Value = 0, Node? Left = null, Node? Right = null)
 {
+    #region Recursion Methods
     public static int MaxBranchSum(Node? node) => node switch
     {
         null => 0,
         _ => Math.Max(MaxBranchSum(node.Left), MaxBranchSum(node.Right)) + node.Value
     };
 
-    public static int _MaxPathSum(Node? node)
+    public static int MaxPathSum(Node? node)
     {
         if (node == null) return 0;
         var result = 0;
@@ -30,7 +29,9 @@ public sealed record Node(int Value = 0, Node? Left = null, Node? Right = null)
 
         return result;
     }
+    #endregion
 
+    #region No Recursion Methods
     public static int MaxBranchSumNoRecursion(Node? node)
     {
         if (node == null) return 0;
@@ -45,26 +46,28 @@ public sealed record Node(int Value = 0, Node? Left = null, Node? Right = null)
 
             if (current.Left != null)
             {
-                var newLeft = new Node(current.Left.Value + current.Value, current.Left.Left, current.Left.Right);
+                var newLeft = new Node(
+                    current.Left.Value + current.Value, 
+                    current.Left.Left, current.Left.Right);
                 stack.Push(newLeft);
             }
 
             if (current.Right != null)
             {
-                var newRight = new Node(current.Right.Value + current.Value, current.Right.Left, current.Right.Right);
+                var newRight = new Node(
+                    current.Right.Value + current.Value, 
+                    current.Right.Left, current.Right.Right);
                 stack.Push(newRight);
             }
 
-            if (current.Left == null && current.Right == null)
-            {
+            if (current.Left == null && current.Right == null) 
                 result = Math.Max(result, current.Value);
-            }
         }
 
         return result;
     }
 
-    public static int MaxPathSum(Node? node)
+    public static int MaxPathSumNoRecursion(Node? node)
     {
         if (node == null) return 0;
 
@@ -74,41 +77,60 @@ public sealed record Node(int Value = 0, Node? Left = null, Node? Right = null)
 
         while (stack.Count > 0)
         {
-            var curr = stack.Pop();
+            var current = stack.Pop();
 
-            if (curr.Left != null)
+            if (current.Left != null)
             {
-                var newLeft = new Node(curr.Left.Value, curr.Left.Left, curr.Left.Right);
-                newLeft = new Node(newLeft.Value + curr.Value, newLeft.Left, newLeft.Right);
+                var newLeft = new Node(current.Left.Value, 
+                    current.Left.Left, current.Left.Right);
+                newLeft = new Node(newLeft.Value + current.Value, 
+                    newLeft.Left, newLeft.Right);
                 stack.Push(newLeft);
             }
 
-            if (curr.Right != null)
+            if (current.Right != null)
             {
-                var newRight = new Node(curr.Right.Value, curr.Right.Left, curr.Right.Right);
-                newRight = new Node(newRight.Value + curr.Value, newRight.Left, newRight.Right);
+                var newRight = new Node(
+                    current.Right.Value, current.Right.Left, current.Right.Right);
+                newRight = new Node(
+                    newRight.Value + current.Value, 
+                    newRight.Left, newRight.Right);
                 stack.Push(newRight);
             }
 
-            if (curr.Left == null && curr.Right == null)
+            if (current.Left == null && current.Right == null)
             {
-                result = Math.Max(result, curr.Value);
-            }
-            else if (curr.Left != null && curr.Right != null)
-            {
-                result = Math.Max(result, Node.MaxBranchSum(curr.Left) + Node.MaxBranchSum(curr.Right) + curr.Value);
-            }
-            else if (curr.Left != null)
-            {
-                result = Math.Max(result, Node.MaxBranchSum(curr.Left) + curr.Value);
-            }
-            else if (curr.Right != null)
-            {
-                result = Math.Max(result, Node.MaxBranchSum(curr.Right) + curr.Value);
+                result = Math.Max(result, current.Value);
+                var sum = current.Value;
+
+                while (stack.Count > 0 && (current.Left != null || current.Right != null))
+                {
+                    current = stack.Pop();
+                    sum += current.Value;
+
+                    if (current.Left != null)
+                    {
+                        var newLeft = new Node(current.Left.Value, 
+                            current.Left.Left, current.Left.Right);
+                        newLeft = new Node(newLeft.Value + current.Value, 
+                            newLeft.Left, newLeft.Right);
+                        stack.Push(newLeft);
+                    }
+
+                    if (current.Right != null)
+                    {
+                        var newRight = new Node(current.Right.Value, 
+                            current.Right.Left, current.Right.Right);
+                        newRight = new Node(newRight.Value + current.Value, 
+                            newRight.Left, newRight.Right);
+                        stack.Push(newRight);
+                    }
+                }
+
+                result = Math.Max(result, sum);
             }
         }
-
         return result;
     }
-
+    #endregion
 }
