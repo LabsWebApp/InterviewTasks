@@ -11,6 +11,7 @@ public sealed record Node(int Value = 0, Node? Left = null, Node? Right = null)
         _ => Math.Max(MaxBranchSum(node.Left), MaxBranchSum(node.Right)) + node.Value
     };
 
+
     public static int MaxPathSum(Node? node)
     {
         if (node == null) return 0;
@@ -32,8 +33,40 @@ public sealed record Node(int Value = 0, Node? Left = null, Node? Right = null)
     }
     #endregion
 
-    #region No Recursive Methods
-    public static int MaxBranchSumNoRecursive(Node? node)
+    #region Not Recursive Methods
+    public static int MaxPathSumNotRecursive(Node? node)
+    {
+        if (node == null) return 0;
+
+        var result = int.MinValue;
+        var stack = new Stack<(Node? Node, bool Visited, int MaxPathSum)>();
+        stack.Push((node, false, 0));
+
+        while (stack.Count > 0)
+        {
+            var (current, visited, maxPathSum) = stack.Pop();
+
+            if (current != null)
+            {
+                if (visited)
+                {
+                    maxPathSum = Math.Max(Math.Max(maxPathSum + current.Value, current.Value), 0);
+                    result = Math.Max(result, maxPathSum);
+                }
+                else
+                {
+                    stack.Push((current, true, maxPathSum));
+                    stack.Push((current.Right, false, maxPathSum + current.Value));
+                    stack.Push((current.Left, false, maxPathSum + current.Value));
+                }
+            }
+        }
+
+        return result;
+    }
+
+
+    public static int MaxBranchSumNotRecursive(Node? node)
     {
         if (node == null) return 0;
 
@@ -67,5 +100,6 @@ public sealed record Node(int Value = 0, Node? Left = null, Node? Right = null)
 
         return result;
     }
+
     #endregion
 }

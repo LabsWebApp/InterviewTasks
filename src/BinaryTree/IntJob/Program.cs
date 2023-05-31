@@ -1,20 +1,21 @@
-﻿Node node = new(-0,
+﻿Node node = new(-100,
     new(5,
         new(1,
             new(10),
             new(9)),
-        new(50)),
+        new(1)),
     new(13,
         new(5,
             new(8)),
         new(2)));
 
+
 node.Print();
 
 Console.WriteLine(Node.MaxBranchSum(node));
-Console.WriteLine(Node.MaxBranchSumNoRecursive(node));
+Console.WriteLine(Node.MaxBranchSumNotRecursive(node));
 Console.WriteLine(Node.MaxPathSum(node));
-//Console.WriteLine(Node.MaxPathSumNoRecursive(node));
+Console.WriteLine(Node.MaxPathSumNotRecursive(node));
 
 var leaf1 = new Node(6);
 var leaf2 = new Node(-5);
@@ -29,6 +30,6 @@ node = new Node(-10, node1, node2);
 node.Print();
 
 Console.WriteLine(Node.MaxPathSum(node));
-//Console.WriteLine(Node.MaxPathSumNoRecursive(node));
+Console.WriteLine(Node.MaxPathSumNotRecursive(node));
 
 Console.ReadLine();
