@@ -48,6 +48,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_BruteForceSearchJob", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BestJob", "TwoPointers\FindCelebrity\BestJob\BestJob.csproj", "{551A547A-0855-4943-B604-B914A4BEC563}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "005_BinarySearch", "005_BinarySearch", "{FC507187-7743-4E92-9A82-031A83BCB6B7}"
+	ProjectSection(SolutionItems) = preProject
+		BinarySearch\Задание.txt = BinarySearch\Задание.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearch", "BinarySearch\BinarySearch\BinarySearch.csproj", "{5678C45C-DBE8-48C0-A89A-EA635E5D7080}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickBinarySearch", "BinarySearch\QuickBinarySearch\QuickBinarySearch.csproj", "{B527C5C6-AF6E-4DAB-AD0A-79DDC64C415F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "006_GetPointByDistance", "006_GetPointByDistance", "{02F9706D-3185-40FE-9E4C-08A3316A3277}"
+	ProjectSection(SolutionItems) = preProject
+		GetPointByDistance\Задание.txt = GetPointByDistance\Задание.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPointByDistance", "GetPointByDistance\GetPointByDistance\GetPointByDistance.csproj", "{2D983A03-3358-4236-B9B8-669DF003A9A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +110,18 @@ Global
 		{551A547A-0855-4943-B604-B914A4BEC563}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{551A547A-0855-4943-B604-B914A4BEC563}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{551A547A-0855-4943-B604-B914A4BEC563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5678C45C-DBE8-48C0-A89A-EA635E5D7080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5678C45C-DBE8-48C0-A89A-EA635E5D7080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5678C45C-DBE8-48C0-A89A-EA635E5D7080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5678C45C-DBE8-48C0-A89A-EA635E5D7080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B527C5C6-AF6E-4DAB-AD0A-79DDC64C415F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B527C5C6-AF6E-4DAB-AD0A-79DDC64C415F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B527C5C6-AF6E-4DAB-AD0A-79DDC64C415F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B527C5C6-AF6E-4DAB-AD0A-79DDC64C415F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D983A03-3358-4236-B9B8-669DF003A9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D983A03-3358-4236-B9B8-669DF003A9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D983A03-3358-4236-B9B8-669DF003A9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D983A03-3358-4236-B9B8-669DF003A9A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +138,9 @@ Global
 		{D37872CD-B8F4-4C01-8246-880C93260C7C} = {1FD05C1B-DA09-47F5-ADC3-879F59A366C7}
 		{AE518127-A467-43DC-8968-11EDE59C912B} = {D37872CD-B8F4-4C01-8246-880C93260C7C}
 		{551A547A-0855-4943-B604-B914A4BEC563} = {D37872CD-B8F4-4C01-8246-880C93260C7C}
+		{5678C45C-DBE8-48C0-A89A-EA635E5D7080} = {FC507187-7743-4E92-9A82-031A83BCB6B7}
+		{B527C5C6-AF6E-4DAB-AD0A-79DDC64C415F} = {FC507187-7743-4E92-9A82-031A83BCB6B7}
+		{2D983A03-3358-4236-B9B8-669DF003A9A7} = {02F9706D-3185-40FE-9E4C-08A3316A3277}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF2A69B2-8AF6-49CF-87DC-528CF3C20916}
