@@ -64,6 +64,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "006_GetPointByDistance", "0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPointByDistance", "GetPointByDistance\GetPointByDistance\GetPointByDistance.csproj", "{2D983A03-3358-4236-B9B8-669DF003A9A7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "007_LRUCache", "007_LRUCache", "{AC6A115D-6ED8-43A3-849F-62818AE1F8D1}"
+	ProjectSection(SolutionItems) = preProject
+		LRUCashe\Задание.txt = LRUCashe\Задание.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LRUCacheDraftApp", "LRUCashe\LRUCaсheDraftApp\LRUCacheDraftApp.csproj", "{C9BB3978-7B11-4245-A9A3-ACD41BD96993}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +129,10 @@ Global
 		{2D983A03-3358-4236-B9B8-669DF003A9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D983A03-3358-4236-B9B8-669DF003A9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D983A03-3358-4236-B9B8-669DF003A9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9BB3978-7B11-4245-A9A3-ACD41BD96993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9BB3978-7B11-4245-A9A3-ACD41BD96993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9BB3978-7B11-4245-A9A3-ACD41BD96993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9BB3978-7B11-4245-A9A3-ACD41BD96993}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +152,7 @@ Global
 		{5678C45C-DBE8-48C0-A89A-EA635E5D7080} = {FC507187-7743-4E92-9A82-031A83BCB6B7}
 		{B527C5C6-AF6E-4DAB-AD0A-79DDC64C415F} = {FC507187-7743-4E92-9A82-031A83BCB6B7}
 		{2D983A03-3358-4236-B9B8-669DF003A9A7} = {02F9706D-3185-40FE-9E4C-08A3316A3277}
+		{C9BB3978-7B11-4245-A9A3-ACD41BD96993} = {AC6A115D-6ED8-43A3-849F-62818AE1F8D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF2A69B2-8AF6-49CF-87DC-528CF3C20916}

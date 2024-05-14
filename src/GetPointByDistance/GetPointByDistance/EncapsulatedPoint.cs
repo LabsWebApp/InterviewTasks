@@ -9,9 +9,10 @@ public readonly record struct EncapsulatedPoint()
     public decimal Z { private get; init; }
 
     // Заметим, что этот метод нам не пригодился
-    public decimal Distance(decimal x = 0, decimal y = 0, decimal z = 0) => Sqrt(DistanceSquared(x, y, z));
+    public decimal Distance(decimal x = 0, decimal y = 0, decimal z = 0)
+        => Sqrt(DistanceSquared(x, y, z));
 
     // 
-    public decimal DistanceSquared(decimal x = 0, decimal y = 0, decimal z = 0) => 
-        Pow(X - x, 2) + Pow(Y - y, 2) + Pow(Z - z, 2);
+    public decimal DistanceSquared(decimal x = 0, decimal y = 0, decimal z = 0) 
+        => Pow(X - x, 2) + Pow(Y - y, 2) + Pow(Z - z, 2);
 }

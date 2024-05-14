@@ -7,9 +7,11 @@ public static class AppExtensions
 {
     public const int DoubleErrorDigits = 15;
 
-    public static double DoubleErrorRound(this double d, int digits = DoubleErrorDigits) => Round(d, digits);
+    public static double DoubleErrorRound(this double d, int digits = DoubleErrorDigits) => 
+        Round(d, digits);
 
-    private static char DecimalSeparator => CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
+    private static char DecimalSeparator => 
+        CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator[0];
 
     private static string TrimZeros(string number) => number.Contains(DecimalSeparator)
         ? number.TrimEnd('0', DecimalSeparator)

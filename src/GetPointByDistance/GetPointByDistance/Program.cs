@@ -26,21 +26,15 @@ static (decimal, decimal, decimal) GetPoint(EncapsulatedPoint point)
 {
     var rPow2 = point.DistanceSquared();
     var ySPow2 = point.DistanceSquared(y: 1);
-    var zSPow2 = point.DistanceSquared(0, 0, 1);
+    var zSPow2 = point.DistanceSquared(z: 1);
 
     var y = (rPow2 - ySPow2 + 1) / 2;
     var z = (rPow2 - zSPow2 + 1) / 2;
     var x = Sqrt(rPow2 - y * y - z * z);
 
-    // 4-ый вызов, можно ли от него избавится?
-    //var distanceSquared = point.DistanceSquared(x, y, z);
-    //Console.WriteLine(distanceSquared);
-    //return point.DistanceSquared(x, y, z) == 0m
-    //    ? new(x, y, z)
-    //    : new((-x), y, z);
-
-    EncapsulatedPoint result = new() { X = x, Y = y, Z = z };
-    return point == result ? new ValueTuple<decimal, decimal, decimal>(x, y, z) : new ValueTuple<decimal, decimal, decimal>((-x), y, z);
+    return point == new EncapsulatedPoint() { X = x, Y = y, Z = z }
+        ? new ValueTuple<decimal, decimal, decimal>(x, y, z) 
+        : new ValueTuple<decimal, decimal, decimal>((-x), y, z);
 }
 
 decimal x = -0.000_000_000_000_22m, y = 0.000_000_000_000_2_222m, z = -0.000_000_000_000_1_111m;
@@ -59,11 +53,4 @@ point = new EncapsulatedPoint() { X = x, Y = y, Z = z };
 Console.WriteLine("Искомая точка:    " + new { x, y, z });
 Console.WriteLine("Полученная точка: " + GetPoint(point).ToStringEx());
 
-Console.WriteLine((new A{I=1}).Equals(new A { I = 1 }) );
-
 Console.ReadLine();
-
-struct A
-{
-    public int I { private get; init; }
-}
